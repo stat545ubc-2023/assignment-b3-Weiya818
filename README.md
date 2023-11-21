@@ -1,5 +1,6 @@
 # Vancouver Trees Explorer App
 
+## Dataset Description
 The Vancouver Trees Explorer App allows users to explore and visualize the `vancouver_trees` dataset in various formats. To access the dataset, users need to install the `datateachr` package if they haven't done so already through `install.packages("datateachr")`. More detailed information about the dataset can be found in the [datateachr documentation](https://rdrr.io/github/UBC-MDS/datateachr/).
 
 ## Features Section
@@ -18,14 +19,14 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 **Visual Enhancements**
 - Include an image of the forest at the top of the sidebar for a visually appealing interface.
 
-**Checkbox for Multiple Species**
+**Checkbox For Multiple Species**
 - Enables users to select one or multiple tree species simultaneously using checkboxes for the data table.
 - Enhances flexibility for exploring data across different species.
 
 **Download Feature**
 - Download buttons are provided, allowing users to download the generated histogram and scatterplot as a PNG file or the generated data table as a CSV file for further analysis.
 
-## App Link
-
-You can access the App through the following link:
+## Shiny App Link
+The App has already been deployed online on shinyapps.io.
+You can access the App through [Vancouver_Trees_Explorer](https://weiyazhu.shinyapps.io/assignment-b3-weiya818/)
 
