@@ -40,7 +40,7 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 - This is the file shown my App has already been deployed online in shinyapps.io.
 
 **www**
--This folder contains the image file I included in the App.
+- This folder contains the image file I included in the App.
 
 ## Shiny App Link
 
