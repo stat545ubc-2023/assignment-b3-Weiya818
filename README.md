@@ -8,7 +8,7 @@ The Vancouver Trees Explorer App allows users to explore and visualize the `vanc
 
 The Vancouver Trees Explorer App offers several interesting features designed for a better user experience!
 
-**Dropdown Menu **
+**Dropdown Menu**
 - This is a feature that creates a dropdown menu for the user to select the tree species for the histogram or the variable of the x and y axis for the scatter plot.
 
 **Slider Interface**
@@ -29,14 +29,14 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 
 ## Functionality Descriptions
 
-**Histogram **
+**Histogram**
 - Users can generate histograms for different tree species and numeric variables.
 - Users can also adjust the bin width for a customized histogram.
 
 **Scatter Plot**
 - Explore relationships between two selected numeric variables using scatter plots.
 
-**Data Table with **
+**Data Table**
 - View detailed information about selected tree species, utilizing a dynamic data table that updates based on user selections.
 
 ## Files in the Directory
