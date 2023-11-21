@@ -1,6 +1,6 @@
 # Vancouver Trees Explorer App
 
-## Dataset Descriptions
+## App and Dataset Descriptions
 
 The Vancouver Trees Explorer App allows users to explore and visualize the `vancouver_trees` dataset in various formats. To access the dataset, users need to install the `datateachr` package if they haven't done so already through `install.packages("datateachr")`. More detailed information about the dataset can be found in the [datateachr documentation](https://rdrr.io/github/UBC-MDS/datateachr/).
 
