@@ -31,7 +31,7 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 ## Files in the Directory
 
 **README.md**
-- This is the current file, which contains the dataset descriptions, feature descriptions, files in the directory and link of Shiny App.
+- This is the current file, which contains the app and dataset descriptions, feature descriptions, files in the directory and link of Shiny App.
 
 **app.R**
 - This is the R code file for the App.
