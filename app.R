@@ -7,7 +7,7 @@ library(datateachr)
 # load the vancouver_trees dataset
 trees_dataset <- datateachr::vancouver_trees
 
-# define User In Interface for the application
+# define User Interface for the application
 ui <- fluidPage(
   titlePanel("Vancouver Trees Explorer App"),
   # define the layout of sidebar
@@ -67,7 +67,7 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic
+# server side logic
 server <- function(input, output) {
 
   # a reactive expression for the filtered data
@@ -118,7 +118,7 @@ server <- function(input, output) {
       theme_bw()
   })
 
-  # Download handler for histogram
+  # download handler for histogram
   output$downloadHistogram <- downloadHandler(
     filename = function() {
       paste('histogram','.png', sep = '')
@@ -137,7 +137,7 @@ server <- function(input, output) {
     }
   )
 
-  # Download handler for scatterplot
+  # download handler for scatterplot
   output$downloadScatterPlot <- downloadHandler(
     filename = function() {
       paste('sactterplot','.png', sep = '')
@@ -167,5 +167,5 @@ server <- function(input, output) {
   )
 }
 
-# Run the application
+# run the app
 shinyApp(ui, server)
