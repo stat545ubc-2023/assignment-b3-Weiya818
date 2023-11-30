@@ -12,7 +12,7 @@ trees_dataset <- datateachr::vancouver_trees
 
 # define User Interface for the application
 ui <- fluidPage(
-  titlePanel("Vancouver Trees Explorer App"),
+  titlePanel("Vancouver Trees Explorer App A4"),
 
   # (b4) Feature 9: Use shinythemes to change the apperance of the App
   theme = shinytheme("spacelab"),
