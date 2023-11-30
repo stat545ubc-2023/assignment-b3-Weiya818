@@ -1,0 +1,36 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color:#d8e4bc;
+  color: #333;
+}
+
+.sidebar {
+  background-color:#fff;
+  border-right: 1px solid #a3c1ad;
+}
+
+.main-panel {
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #a3c1ad;
+}
+
+.panel-heading {
+  background-color: #2e8b57 ;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.titlePanel h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #2e8b57;
+  padding: 10px 0;
+}
+
+h1, h2, h3, h4 {
+  color: #333;
+}
