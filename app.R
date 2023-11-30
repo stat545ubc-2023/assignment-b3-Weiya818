@@ -3,6 +3,8 @@ library(shiny)
 library(tidyverse)
 library(DT)
 library(datateachr)
+library(colourpicker)
+library(shinyBS)
 
 # load the vancouver_trees dataset
 trees_dataset <- datateachr::vancouver_trees
@@ -10,6 +12,8 @@ trees_dataset <- datateachr::vancouver_trees
 # define User Interface for the application
 ui <- fluidPage(
   titlePanel("Vancouver Trees Explorer App"),
+  # (b4)Feature 7: Added CSS to make the shiny app look nicer
+  includeCSS("www/style.css"),
   # define the layout of sidebar
   sidebarLayout(
     sidebarPanel(
@@ -31,6 +35,9 @@ ui <- fluidPage(
       sliderInput("binwidth", "Select Histogram Bin Width:",
                   min = 1, max = 50, value = 1),
 
+      # (b4) Feature 8: a feature to allow the user decide on the colours of the bars in the histogram
+      colourInput("histColor", "Choose Histogram Bar Color", value = "#3cb371"),
+
       # a feature that creates a dropdown menu for the user to select a numeric variable for x_axis of the scatterplot
       selectInput("x_variable", "Select Scatterplot x_axis Variable:",
                   choices = names(trees_dataset %>% select_if(is.numeric)),
@@ -40,6 +47,9 @@ ui <- fluidPage(
       selectInput("y_variable", "Select Scatterplot y_axis Variable:",
                   choices = names(trees_dataset %>% select_if(is.numeric)),
                   selected = "diameter"),
+
+      # a feature to allow the user decide on the colours of the points in the scatter plot
+      colourInput("scatterColor", "Choose Scatter Plot Point Color", value = "#013220"),
 
       # Feature 6: a feature allows users to select one or multiple tree species for data table
       checkboxGroupInput("selected_species", "Select Tree Species for Data Table:",
@@ -62,6 +72,7 @@ ui <- fluidPage(
                  h4("Selected Tree Species Data Table"),
                  DTOutput("data_table"),
                  downloadButton("downloadData", "Download Selected Data"))
+
       )
     )
   )
@@ -69,7 +80,6 @@ ui <- fluidPage(
 
 # server side logic
 server <- function(input, output) {
-
   # a reactive expression for the filtered data
   filtered_data <- reactive({
     trees_dataset %>%
@@ -89,7 +99,7 @@ server <- function(input, output) {
       filter(!is.na(!!sym(input$variable)), !is.infinite(!!sym(input$variable)))
     # plot the histogram
     ggplot(data_filtered, aes(x = !!sym(input$variable))) +
-      geom_histogram(binwidth = input$binwidth, fill = '#3cb371') +
+      geom_histogram(binwidth = input$binwidth, fill = input$histColor) +
       labs(x = input$variable,
            title = paste('Histogram of', input$variable, 'for', input$species)) +
       theme_bw()
@@ -112,7 +122,7 @@ server <- function(input, output) {
       filter(!is.na(!!sym(input$x_variable)), !is.na(!!sym(input$y_variable)))
     # plot the scatter plot
     ggplot(filtered_data, aes(x = !!sym(input$x_variable), y = !!sym(input$y_variable))) +
-      geom_point() +
+      geom_point(color = input$scatterColor) +
       labs(x = input$x_variable, y = input$y_variable,
            title = paste('Scatter Plot of', input$x_variable, 'vs', input$y_variable, 'for', input$species)) +
       theme_bw()
@@ -130,7 +140,7 @@ server <- function(input, output) {
           filter(!is.na(!!sym(input$variable)), !is.infinite(!!sym(input$variable)))
 
         ggplot(data_filtered, aes(x = !!sym(input$variable))) +
-          geom_histogram(binwidth = input$binwidth, fill = '#3cb371') +
+          geom_histogram(binwidth = input$binwidth, fill = input$histColor) +
           labs(x = input$variable,
                title = paste('Histogram of', input$variable, 'for', input$species)) +
           theme_bw()}, device = "png", width = 12, height =10 )
@@ -149,7 +159,7 @@ server <- function(input, output) {
           filter(!is.na(!!sym(input$x_variable)), !is.na(!!sym(input$y_variable)))
 
         ggplot(filtered_data, aes(x = !!sym(input$x_variable), y = !!sym(input$y_variable))) +
-          geom_point() +
+          geom_point(color = input$scatterColor) +
           labs(x = input$x_variable, y = input$y_variable,
                title = paste('Scatter Plot of', input$x_variable, 'vs', input$y_variable, 'for', input$species)) +
           theme_bw()}, device = "png", width = 14, height =8 )
