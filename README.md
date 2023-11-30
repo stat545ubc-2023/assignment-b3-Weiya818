@@ -4,7 +4,7 @@
 
 The Vancouver Trees Explorer App allows users to explore and visualize the `vancouver_trees` dataset in various formats. To access the dataset, users need to install the `datateachr` package if they haven't done so already through `install.packages("datateachr")`. More detailed information about the dataset can be found in the [datateachr documentation](https://rdrr.io/github/UBC-MDS/datateachr/).
 
-## Features Descriptions
+## Features Descriptions (Assignment B3)
 
 The Vancouver Trees Explorer App offers several interesting features designed for a better user experience!
 
@@ -26,6 +26,20 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 
 **Download Feature**
 - Download buttons are provided, allowing users to download the generated histogram and scatterplot as a PNG file or the generated data table as a CSV file for further analysis.
+
+## Features Descriptions (Assignment B4)
+
+**CSS**
+- Added CSS to make the app look nicer
+
+**colourInput**
+- The `colourInput feature` from the `colourpicker` package in Shiny allows users to select colors through a user-friendly color picker interface. 
+
+**shinythemes**
+- shinythemes offers many pre-built Bootstrap themes that we can use to change the appearance of the Shiny app. 
+
+**Reactive Text Display**
+- This feature dynamically updates text in the UI based on changes to reactive inputs or filters. It is abble to provide real-time feedback to users about the state of the data being displayed.
 
 ## Functionality Descriptions
 
@@ -51,10 +65,10 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 - This is the file showing my App has already been deployed online in shinyapps.io.
 
 **www**
-- This folder contains the image file I included in the App.
+- This folder contains the image file I included in the App as well as the css file named style.css.
 
 ## Shiny App Link
 
 The App has already been deployed online on shinyapps.io.
-You can access the App through [Vancouver_Trees_Explorer](https://weiyazhu.shinyapps.io/assignment-b3-weiya818/)
+You can access the App Version 1 through [Vancouver_Trees_Explorer_AssignmentB3](https://weiyazhu.shinyapps.io/assignment-b3-weiya818/)
 
