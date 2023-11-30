@@ -5,6 +5,7 @@ library(DT)
 library(datateachr)
 library(colourpicker)
 library(shinyBS)
+library(shinythemes)
 
 # load the vancouver_trees dataset
 trees_dataset <- datateachr::vancouver_trees
@@ -12,7 +13,10 @@ trees_dataset <- datateachr::vancouver_trees
 # define User Interface for the application
 ui <- fluidPage(
   titlePanel("Vancouver Trees Explorer App"),
-  # (b4)Feature 7: Added CSS to make the shiny app look nicer
+
+  # (b4) Feature 9: Use shinythemes to change the apperance of the App
+  theme = shinytheme("spacelab"),
+  # (b4) Feature 7: Added CSS to make the shiny app look nicer
   includeCSS("www/style.css"),
   # define the layout of sidebar
   sidebarLayout(
@@ -62,6 +66,7 @@ ui <- fluidPage(
         # include three different tab panels which generate histograms, scatter plots and data tables respectively
         tabPanel("Histogram",
                  plotOutput("histogram", height="600px"),
+                 # (b4) Feature 10: Show the number of results found whenever the filters change
                  h4("Total Number of Trees of This Species:"),
 
                  # Feature 5: a feature allows users to download the generated histogram as png file.
@@ -80,6 +85,7 @@ ui <- fluidPage(
 
 # server side logic
 server <- function(input, output) {
+
   # a reactive expression for the filtered data
   filtered_data <- reactive({
     trees_dataset %>%
