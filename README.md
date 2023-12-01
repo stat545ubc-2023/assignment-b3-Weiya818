@@ -71,4 +71,5 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 
 The App has already been deployed online on shinyapps.io.
 You can access the App Version 1 through [Vancouver_Trees_Explorer_AssignmentB3](https://weiyazhu.shinyapps.io/assignment-b3-weiya818/)
+You can access the App improved Version 2 through [Vancouver_Trees_Explorer_AssignmentB4](https://weiyazhu.shinyapps.io/assignment-b3-improved-weiya818/)
 
