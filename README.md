@@ -30,13 +30,13 @@ The Vancouver Trees Explorer App offers several interesting features designed fo
 ## Features Descriptions (Assignment B4)
 
 **CSS**
-- Added CSS to make the app look nicer
+- Added CSS to make the app look nicer, mainly deals with the background color and the font color.
 
 **colourInput**
 - The `colourInput feature` from the `colourpicker` package in Shiny allows users to select colors through a user-friendly color picker interface. 
 
 **shinythemes**
-- shinythemes offers many pre-built Bootstrap themes that we can use to change the appearance of the Shiny app. 
+- shinythemes offers many pre-built Bootstrap themes that we can use to change the appearance of the Shiny app, mainly deals with the download button style.
 
 **Reactive Text Display**
 - This feature dynamically updates text in the UI based on changes to reactive inputs or filters. It is abble to provide real-time feedback to users about the state of the data being displayed.
